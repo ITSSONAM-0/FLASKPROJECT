@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+  <h1 class="text-center">Welcome to the Home Page</h1>
+  <p>This is the main content of the home page.</p>
+</div>
+
+<div class="container mt-4">
+  <form action="/" method="POST">
+    <div class="mb-3">
+      <label for="name" class="form-label">Full Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="name@example.com"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone"
+        name="phone"
+        placeholder="Enter phone number"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="salary" class="form-label">Salary</label>
+      <input
+        type="text"
+        class="form-control"
+        id="salary"
+        name="salary"
+        placeholder="Enter salary"
+      />
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
+
+<div class="container my-4">
+  <h2 class="text-center">Form Submission</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Salary</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in allEmployee %}
+      <tr>
+        <th scope="row">{{ loop.index }}</th>
+        <td>{{ i.name }}</td>
+        <td>{{ i.email }}</td>
+        <td>{{ i.phone }}</td>
+        <td>{{ i.salary }}</td>
+        <td>
+          <a href="/Delete/{{ i.sno }}" class="btn btn-danger btn-sm">Delete</a>
+          <a href="/Update/{{ i.sno }}" class="btn btn-warning btn-sm">Update</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
