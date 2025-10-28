@@ -66,22 +66,7 @@ python app.py
 
 Then open your browser at: `http://127.0.0.1:5000/`
 
-## 📂 Folder Structure
 
-```
-flask-form-page/
-├─ app.py                # Flask app and routes
-├─ requirements.txt
-├─ templates/
-│  ├─ base.html
-│  ├─ form.html          # Form page
-│  └─ success.html       # Thank-you / result page
-├─ static/
-│  ├─ css/
-│  │  └─ style.css
-│  └─ js/
-│     └─ main.js
-└─ README.md
 ```
 
 ## app.py — Overview
@@ -108,31 +93,3 @@ flask-form-page/
   gunicorn -w 4 app:app
   ```
 
-## 🧪 Testing
-
-* Manual: open form in browser and submit test data.
-* Automated: write unit tests with `pytest` to test routes and validation.
-
-## ⚙️ Common Issues
-
-* **TemplateNotFound**: ensure `templates/` folder is in the same directory as `app.py`, and filenames match.
-* **Static files not loading**: use correct syntax — `{{ url_for('static', filename='css/style.css') }}`.
-* **Form data is None**: ensure `<form method="POST">` and each field has a proper `name` attribute.
-
-## 💡 Future Improvements
-
-* Add better form validation with `Flask-WTF`.
-* Save submissions to a database (SQLite/Postgres).
-* Improve UI using Bootstrap or Tailwind CSS.
-
-## 🤝 Contributing
-
-Feel free to fork the repo and open a Pull Request. Please open an issue first to discuss your proposed changes.
-
-## 📄 License
-
-You may include any license that fits your project — for example, MIT.
-
----
-
-If you share your `app.py` and `templates/form.html`, I can update this README with exact project-specific details (dependencies, run commands, etc.).
