@@ -1,6 +1,6 @@
-# Flask Form Page — README
+# Flask Form Page 
 
-This README is for a small Flask project that includes an HTML form page. It explains how to set up, run, and understand the folder structure and main functionality.
+This  is for a small Flask project that includes an HTML form page. It explains how to set up, run, and understand the folder structure and main functionality.
 
 ---
 
