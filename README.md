@@ -14,7 +14,7 @@ A simple web form page that collects user input (like name, email, message), pro
 * Basic server-side validation
 * Redirect or Thank You page after successful submission
 * Uses Jinja2 templates (templates/)
-* Static files for CSS/JS in static/
+
 
 ## 🧰 Requirements
 
